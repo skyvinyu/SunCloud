@@ -13,8 +13,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cc\
-        mainwindow.cc
+        mainwindow.cc \
+    src/MetarParser.cc
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    include/MetarParser.h
 
 FORMS    += mainwindow.ui
+
+INCLUDEPATH += "../_xlibs/include/boost/"
+INCLUDEPATH += "../ExternalLib/mdsplib/include"
+INCLUDEPATH += "../ExternalLib/mdsplib/src"
+LIBS += "-L../_xlibs/lib/"
+LIBS += "-L../ExternalLib/mdsplib/lib"
