@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cc\
         mainwindow.cc \
-    src/MetarParser.cc
+    src/MetarParser.cc \
+    src/Metar.cc
 
 HEADERS  += mainwindow.h \
-    include/MetarParser.h
+    include/MetarParser.h \
+    include/Metar.h
 
 FORMS    += mainwindow.ui
 
