@@ -1,6 +1,7 @@
 #-------------------------------------------------
 #
 # Project created by QtCreator 2015-01-07T10:50:23
+#   by: YU Yi skyvin.yu@gmail.com
 #
 #-------------------------------------------------
 
@@ -12,19 +13,24 @@ TARGET = SunCloud
 TEMPLATE = app
 
 
-SOURCES += main.cc\
-        mainwindow.cc \
+SOURCES += \
+    src/main.cc\
+    src/mainwindow.cc \
     src/MetarParser.cc \
     src/Metar.cc
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
+    include/mainwindow.h \
     include/MetarParser.h \
-    include/Metar.h
+    include/Metar.h \
+    include/ui_mainwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    ui/mainwindow.ui
 
 INCLUDEPATH += "../_xlibs/include/boost/"
 INCLUDEPATH += "../ExternalLib/mdsplib/include"
 INCLUDEPATH += "../ExternalLib/mdsplib/src"
 LIBS += "-L../_xlibs/lib/"
 LIBS += "-L../ExternalLib/mdsplib/lib"
+LIBS += "../ExternalLib/mdsplib/lib/libmdsp.lib"

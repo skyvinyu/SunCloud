@@ -1,8 +1,9 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu 22. Jan 16:02:44 2015
-**      by: Qt User Interface Compiler version 4.8.2
+** Created: Thu 22. Jan 14:47:10 2015
+**      by: YU Yi
+**          Qt User Interface Compiler version 4.8.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -55,7 +56,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 21));
+        menuBar->setGeometry(QRect(0, 0, 400, 20));
         menuSunCloud = new QMenu(menuBar);
         menuSunCloud->setObjectName(QString::fromUtf8("menuSunCloud"));
         MainWindow->setMenuBar(menuBar);
