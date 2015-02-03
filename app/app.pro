@@ -7,14 +7,16 @@
 
 include(../defaults.pri)
 
-
-QT       += core gui
+#QT += gui
+QT += core gui
+QT += widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = SunCloud
 TEMPLATE = app
-CONFIG += console
+CONFIG += qt
+#CONFIG += console
 
 DESTDIR = ../bin/
 
@@ -24,14 +26,16 @@ LIBS += "-L../lib -llibsuncloud"
 
 SOURCES += \
     main.cc\
-    mainwindow.cc
+    mainwindow.cc \
+    MainWindow.cc
 
 HEADERS  += \
     mainwindow.h \
-    ui_mainwindow.h
+    MainWindow.h
 
 FORMS    += \
-    mainwindow.ui
+    mainwindow.ui \
+    MainWindow.ui
 
 
 

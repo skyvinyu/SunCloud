@@ -16,6 +16,9 @@
 #SOURCES +=
 
 include(../defaults.pri)
+
+QT += widgets
+
 TEMPLATE = app
 
 CONFIG   += console
@@ -27,8 +30,12 @@ HEADERS += MetarTest.h
 SOURCES += tests_runner.cc
 SOURCES += MetarTest.cc
 
-INCLUDEPATH += ../../ExternalLib/unittest-cpp_1_4/src
-LIBS += -L../../ExternalLib/unittest-cpp_1_4/lib -lUnitTest++.vsnet2005.debug
-LIBS += -L../lib -llibsuncloud
-LIBS += "../../ExternalLib/mdsplib/lib/libmdsp.lib"
-#LIBS += "-L../../ExternalLib/mdsplib/lib -llibmdsp"
+INCLUDEPATH += C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/src
+#INCLUDEPATH += $$TOP_OUT_PWD/ExternalLib/unittest-cpp_1_4/src
+#INCLUDEPATH += ../ExternalLib/unittest-cpp_1_4/src
+
+LIBS += -LC:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/x64/Debug -lUnitTest++.vsnet2005.debug
+
+LIBS += -L$$TOP_PWD/lib -llibsuncloud
+LIBS += C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/mdsplib/lib/libmdsp.lib
+#LIBS += -L../../ExternalLib/mdsplib/lib -llibmdsp
