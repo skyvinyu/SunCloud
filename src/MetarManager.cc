@@ -3,7 +3,8 @@
 **      by: YU Yi
 **/
 
-#include "MetarParser.h"
+#include "MetarManager.h"
+
 #include <iostream>
 #include <string>
 #include <exception>
@@ -13,13 +14,13 @@
 namespace altran {
 namespace suncloud {
 
-MetarParser::MetarParser() {
+MetarManager::MetarManager() {
 }
 
-MetarParser::~MetarParser() {
+MetarManager::~MetarManager() {
 }
 
-void MetarParser::parse(std::istream& is) {
+void MetarManager::parse(std::istream& is) {
     //std::string str = os.str();
     //char *inputMetar = str.c_str();
     int ret = 0;

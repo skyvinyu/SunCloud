@@ -17,24 +17,21 @@
 
 include(../defaults.pri)
 
-QT += widgets
-
 TEMPLATE = app
 
 CONFIG   += console
-CONFIG   -= app_bundle
-CONFIG   -= qt
 
-HEADERS += MetarTest.h
+#HEADERS += MetarTest.h
 
 SOURCES += tests_runner.cc
-SOURCES += MetarTest.cc
+#SOURCES += MetarTest.cc
 
-INCLUDEPATH += C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/src
+#INCLUDEPATH += C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/src
 #INCLUDEPATH += $$TOP_OUT_PWD/ExternalLib/unittest-cpp_1_4/src
 #INCLUDEPATH += ../ExternalLib/unittest-cpp_1_4/src
+INCLUDEPATH += "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include"
 
-LIBS += -LC:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/x64/Debug -lUnitTest++.vsnet2005.debug
+#LIBS += -LC:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/x64/Debug -lUnitTest++.vsnet2005.debug
 
 LIBS += -L$$TOP_PWD/lib -llibsuncloud
 LIBS += C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/mdsplib/lib/libmdsp.lib

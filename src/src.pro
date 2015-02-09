@@ -16,10 +16,13 @@ CONFIG -= app_bundle
 
 DESTDIR = ../lib/
 
+#QMAKE_CXXFLAGS += -std=c++11
+
 # Include and source path definition
 INCLUDEPATH += "../../ExternalLib/_xlibs/include/"
 INCLUDEPATH += "../../ExternalLib/mdsplib/include"
 INCLUDEPATH += "../../ExternalLib/mdsplib/src"
+INCLUDEPATH += "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include"
 LIBS += "-L../../_xlibs/lib/"
 LIBS += "-L../../ExternalLib/mdsplib/lib"
 LIBS += "../../ExternalLib/mdsplib/lib/libmdsp.lib"
@@ -30,16 +33,17 @@ DEFINES += USE_BOOST_GEOMETRY
 
 # Source code and header
 SOURCES += \
-    MetarParser.cc \
     Metar.cc \
     QtLogger.cc \
     FlightRoute.cc \
     ApplicationException.cc \
-    RestrictedArea.cc
-
+    RestrictedArea.cc \
+    MetarManager.cc \
+    MetarKmlWriter.cc \
+    FlightManager.cc \
+    FlightRouteScilabWriter.cc
 
 HEADERS  += \
-    MetarParser.h \
     Metar.h \
     LogService.h \
     QtLogger.h \
@@ -47,4 +51,10 @@ HEADERS  += \
     FlightRoute.h \
     Contract.h \
     ApplicationException.h \
-    RestrictedArea.h
+    RestrictedArea.h \
+    MetarManager.h \
+    IMetarWriter.h \
+    MetarKmlWriter.h \
+    FlightManager.h \
+    IFlightRouteWriter.h \
+    FlightRouteScilabWriter.h
