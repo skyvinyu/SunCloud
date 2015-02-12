@@ -1,27 +1,38 @@
 #ifndef METARTEST_H
 #define METARTEST_H
 
-#include <UnitTest++.h>
-
+#include "AutoTest.h"
 #include "Metar.h"
 
 namespace altran {
 namespace suncloud {
 namespace test {
 
-class MetarTest {
-public:
-    MetarTest();
-    virtual ~MetarTest();
+class MetarTest : public QObject {
+    Q_OBJECT
 
-    std::string getInputMetarString() {
-        std::string str(m_inputMetarString);
-        return str;
-    }
+//public:
+//    MetarTest();
+//    virtual ~MetarTest();
 
-private:
-    static const char* m_inputMetarString;
+//    std::string getInputMetarString() {
+//        std::string str(m_inputMetarString);
+//        return str;
+//    }
+
+//private:
+//    static const char* m_inputMetarString;
+
+
+private slots:
+    void initTestCase();
+    void test1();
+    void test2();
+    void cleanupTestCase();
+
 };
+
+DECLARE_TEST(MetarTest)
 
 }
 }

@@ -33,18 +33,15 @@ public:
      */
     void setStartTime(const std::chrono::time_point<std::chrono::system_clock> &startTime);
 
-    /**
-     * @brief operator << Flush content to stream
-     * @param os    Output stream
-     * @param flightRoute   Flight route
-     * @return Output stream
-     */
-    friend std::ostream& operator<<(std::ostream& os, const FlightRoute& flightRoute);
+//    /**
+//     * @brief operator << Flush content to stream
+//     * @param os    Output stream
+//     * @param flightRoute   Flight route
+//     * @return Output stream
+//     */
+//    friend std::ostream& operator<<(std::ostream& os, const FlightRoute& flightRoute);
 
 //protected:
-
-    void flushStartTime(std::ostream& os);
-    void flushPoints(std::ostream& os) ;
 
 //    template<class Writer>
 //    void write(std::ostream& os);
@@ -56,38 +53,6 @@ private:
 
     std::chrono::time_point<std::chrono::system_clock> m_startTime;
 
-
-    template <typename Point>
-    class PointWriter {
-    public :
-        PointWriter(std::ostream& os)  :
-            m_os(os){}
-
-        void operator()(Point& p) {
-            m_os << boost::geometry::get<0>(p) << " "
-                 << boost::geometry::get<1>(p) << " "
-                 << boost::geometry::get<2>(p) << std::endl;
-        }
-
-    private :
-        std::ostream& m_os;
-
-    };
-
-//    /**
-//     * @brief flushPoint  Flush point to stream
-//     * @param p   point type
-//     * @param os    Output stream
-//     */
-//    template <typename Point>
-//    void flushPoint(Point const& p, std::ostream& os) {
-//        os << boost::geometry::get<0>(p) << " "
-//           << boost::geometry::get<1>(p) << " "
-//           << boost::geometry::get<2>(p) << std::endl;
-//    }
-
-    std::tm getLocalTm();
-    int getStartDaysOfYear();
 
 };
 
