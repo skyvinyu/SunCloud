@@ -11,6 +11,7 @@ extern "C" {
 typedef struct decoded_METAR Decoded_METAR;
 
 void sprint_metar (char * string, Decoded_METAR *Mptr);
+void prtDMETR (Decoded_METAR *Mptr);
 }
 
 namespace altran {
@@ -28,9 +29,12 @@ public:
     void decode(const std::string& input);
 
     friend std::ostream& operator<<(std::ostream& os, const Metar& metar){
-        char *cStr;
-        sprint_metar(cStr, &((Decoded_METAR)metar));
-        os << cStr;
+//        char cStr[1024*32];
+//        sprint_metar(cStr, &((Decoded_METAR)metar));
+
+        char string[5000];
+        sprint_metar(string, &((Decoded_METAR)metar));
+        os << string;
         return os;
     }
 

@@ -15,9 +15,9 @@ FlightRoute::~FlightRoute()
 {
 }
 
-void FlightRoute::initRoute(const std::vector<std::tuple<double, double, double, double> > &vertex)
+void FlightRoute::initRoute(const Vertex4DArray &vertex)
 {
-    for(const std::tuple<double, double, double, double>& p : vertex)
+    for(const Vertex4D& p : vertex)
     {
         double x = std::get<0>(p);
         double y = std::get<1>(p);
@@ -39,6 +39,17 @@ void FlightRoute::setStartTime(const std::chrono::time_point<std::chrono::system
 {
     m_startTime = startTime;
 }
+
+Line3D FlightRoute::getRoute() const
+{
+    return m_route;
+}
+
+void FlightRoute::setRoute(const Line3D &route)
+{
+    m_route = route;
+}
+
 
 
 }

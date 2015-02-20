@@ -2,7 +2,7 @@ TEMPLATE = subdirs
 CONFIG+=ordered
 SUBDIRS = \
     src \
-    app \
+#    app \
     tests
-app.depends = src
+#app.depends = src
 tests.depends = src

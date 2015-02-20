@@ -40,8 +40,8 @@ SOURCES += \
     RestrictedArea.cc \
     MetarManager.cc \
     MetarKmlWriter.cc \
-    FlightManager.cc \
-    FlightRouteScilabWriter.cc
+    FlightManager.cc
+#    FlightRouteScilabWriter.cc
 
 HEADERS  += \
     Metar.h \
@@ -55,6 +55,6 @@ HEADERS  += \
     MetarManager.h \
     IMetarWriter.h \
     MetarKmlWriter.h \
-    FlightManager.h \
-    IFlightRouteWriter.h \
-    FlightRouteScilabWriter.h
+    FlightManager.h
+#    IFlightRouteWriter.h \
+#    FlightRouteScilabWriter.h
