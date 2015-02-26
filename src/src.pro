@@ -40,7 +40,13 @@ SOURCES += \
     RestrictedArea.cc \
     MetarManager.cc \
     MetarKmlWriter.cc \
-    FlightManager.cc
+    FlightManager.cc \
+    BarycentricInterpolation.cc \
+    MetarWindFilter.cc \
+    MultiMetarFilter.cc \
+    MetarSkyCoverFilter.cc \
+    IndexedMetar.cc \
+    MetarHandler.cc
 #    FlightRouteScilabWriter.cc
 
 HEADERS  += \
@@ -55,6 +61,17 @@ HEADERS  += \
     MetarManager.h \
     IMetarWriter.h \
     MetarKmlWriter.h \
-    FlightManager.h
+    FlightManager.h \
+    CustomGeometry.h \
+    IInterpolation.h \
+    BarycentricInterpolation.h \
+    IMetarFilter.h \
+    MetarWindFilter.h \
+    Constant.h \
+    MultiMetarFilter.h \
+    MetarSkyCoverFilter.h \
+    CustomGeometryIndexer.h \
+    IndexedMetar.h \
+    MetarHandler.h
 #    IFlightRouteWriter.h \
 #    FlightRouteScilabWriter.h

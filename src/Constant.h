@@ -1,0 +1,9 @@
+#ifndef SUNCLOUD_CONSTANT_H
+#define SUNCLOUD_CONSTANT_H
+
+#define DANGEROUS_WIND_SPEED_THRESHOULD     (18)
+
+#define DEFAULT_RTREE_NODE_NUMBER           (256)
+
+#endif // CONSTANT_H
+

@@ -5,7 +5,7 @@
 #include <vector>
 #include <tuple>
 
-#include "Geometry.h"
+#include "CustomGeometry.h"
 
 #include "IFlightRouteWriter.h"
 
@@ -18,11 +18,11 @@ class FlightRoute
 
 public:
 
-    typedef std::tuple<double, double, double> Vertex3D;
-    typedef std::vector<Vertex3D > Vertex3DArray;
+    typedef std::tuple<double, double, double> Double3D;
+    typedef std::vector<Double3D > Double3DArray;
 
-    typedef std::tuple<double, double, double, double> Vertex4D;
-    typedef std::vector<Vertex4D > Vertex4DArray;
+    typedef std::tuple<double, double, double, double> Double4D;
+    typedef std::vector<Double4D > Double4DArray;
 
     FlightRoute();
     virtual ~FlightRoute();
@@ -31,7 +31,7 @@ public:
      * @brief initRoute Initilize flight route coordinate, altitude and speed
      * @param vertex4d The vertex for the flight route, the four field tuple is x, y, z, speed
      */
-    void initRoute(const Vertex4DArray& vertex4d);
+    void initRoute(const Double4DArray& vertex4d);
 
     /**
      * @brief setStartTime Set flight start time
@@ -52,13 +52,16 @@ public:
 //    template<class Writer>
 //    void write(std::ostream& os);
 
-    Line3D getRoute() const;
-    void setRoute(const Line3D &getRoute);
+    LineTrack getRoute() const{
+        return m_route;
+    }
+    void setRoute(const LineTrack &route){
+        m_route = route;
+    }
 
 private:
 
-    Line3D m_route;
-    std::vector<double> m_speed;
+    LineTrack m_route;
 
     std::chrono::time_point<std::chrono::system_clock> m_startTime;
 

@@ -1,10 +1,9 @@
 #ifndef METARMANAGER_H
 #define METARMANAGER_H
 
-#include <vector>
-#include <memory>
+#include "CustomGeometryIndexer.h"
 
-#include "Metar.h"
+#include <map>
 
 namespace altran {
 namespace suncloud {
@@ -14,22 +13,15 @@ namespace suncloud {
  */
 class MetarManager{
 public:
-    typedef std::vector<std::shared_ptr<Metar> > PMetarArray;
+
     MetarManager();
     virtual ~MetarManager();
 
-    void parse(std::istream& is);
-
-    PMetarArray getPMetarArray() const { return m_pMetarArray; }
-
-//    template<T>
-//    void write(T writer, std::ostream& os) {
-//        writer.write(m_pMetarArray, os);
-//    }
+    void getIndexerByDate();
 
 private:
-    PMetarArray m_pMetarArray;
 
+    std::map<std::string, CustomGeometryIndexer> m_geometryIndexer;
 };
 
 }

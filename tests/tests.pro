@@ -10,19 +10,23 @@ CONFIG  -= app_bundle
 
 TEMPLATE = app
 SOURCES += tests_runner.cc \
+           FlightRouteTest.cc \
            MetarTest.cc
 HEADERS += AutoTest.h \
+           FlightRouteTest.h \
            MetarTest.h
 
 #INCLUDEPATH += C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/src
 #INCLUDEPATH += $$TOP_OUT_PWD/ExternalLib/unittest-cpp_1_4/src
 #INCLUDEPATH += ../ExternalLib/unittest-cpp_1_4/src
 INCLUDEPATH += "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include"
+INCLUDEPATH += "C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/_xlibs/include"
 INCLUDEPATH += "../../ExternalLib/_xlibs/include/"
 
 #LIBS += -LC:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/unittest-cpp_1_4/x64/Debug -lUnitTest++.vsnet2005.debug
 
-LIBS += -L$$TOP_PWD/lib -llibsuncloud
+#LIBS += -L$$TOP_PWD/lib -llibsuncloud
+LIBS += -LC:/Users/Sun-Cloud/Documents/Workspace_Qt/SunCloud/build/build-SunCloud-Qt5_4-Debug/lib -llibsuncloud
 LIBS += C:/Users/Sun-Cloud/Documents/Workspace_Qt/ExternalLib/mdsplib/lib/libmdsp.lib
 #LIBS += -L$$TOP_PWD/../../ExternalLib/mdsplib/lib -llibmdsp
 LIBS += -lQt5Testd

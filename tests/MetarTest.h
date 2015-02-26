@@ -17,10 +17,6 @@ class MetarTest : public QObject {
     Q_OBJECT
 
 private slots:
-//    void initTestCase();
-//    void test1();
-//    void test2();
-//    void cleanupTestCase();
 
     void testDecode();
 

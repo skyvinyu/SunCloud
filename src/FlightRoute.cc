@@ -15,41 +15,28 @@ FlightRoute::~FlightRoute()
 {
 }
 
-void FlightRoute::initRoute(const Vertex4DArray &vertex)
+void FlightRoute::initRoute(const Double4DArray &vertex)
 {
-    for(const Vertex4D& p : vertex)
+    for(const Double4D& p : vertex)
     {
         double x = std::get<0>(p);
         double y = std::get<1>(p);
         double z = std::get<2>(p);
-
-        Point3D point(x, y, z);
-
-        m_route.push_back(point);
-
         double speed = std::get<3>(p);
-        m_speed.push_back(speed);
 
-        FWK_DEBUG("Add 3d point " << x << ", " << y << ", " << z << " to FlightRoute");
+        m_route.push_back(Point4D(x, y, z, speed));
+
+        FWK_DEBUG("Add 4d point " << x << ", " << y << ", " << z << ", " << speed << " to FlightRoute");
     }
     FWK_DEBUG("FlightRout initialized with " << vertex.size() << " vertex");
+
+//    FWK_DEBUG("FlightRout in wkt: " << boost::geometry::dsv(track));
 }
 
 void FlightRoute::setStartTime(const std::chrono::time_point<std::chrono::system_clock> &startTime)
 {
     m_startTime = startTime;
 }
-
-Line3D FlightRoute::getRoute() const
-{
-    return m_route;
-}
-
-void FlightRoute::setRoute(const Line3D &route)
-{
-    m_route = route;
-}
-
 
 
 }

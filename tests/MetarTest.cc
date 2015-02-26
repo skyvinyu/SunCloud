@@ -35,7 +35,7 @@ void MetarTest::parseLine(std::string& line) {
     Metar metar;
     metar.decode(line);
 
-//    std::cout << "METAR PARSED:" << std::endl << metar << std::endl << std::endl;
+    std::cout << "METAR PARSED:" << metar;
 
 //    std::cout << "ROW TOKEN:" << std::endl;
 //    for(; ite_tok != tokens.end(); ite_tok++) {
