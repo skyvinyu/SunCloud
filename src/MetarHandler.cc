@@ -1,9 +1,5 @@
-/***
-*** ** Created: Thu 22. Jan 14:47:10 2015
-**      by: YU Yi
-**/
+#include "MetarHandler.h"
 
-#include "MetarParser.h"
 #include <iostream>
 #include <string>
 #include <exception>
@@ -13,13 +9,13 @@
 namespace altran {
 namespace suncloud {
 
-MetarParser::MetarParser() {
+MetarHandler::MetarHandler() {
 }
 
-MetarParser::~MetarParser() {
+MetarHandler::~MetarHandler() {
 }
 
-void MetarParser::parse(std::istream& is) {
+void MetarHandler::parse(std::istream& is) {
     //std::string str = os.str();
     //char *inputMetar = str.c_str();
     int ret = 0;

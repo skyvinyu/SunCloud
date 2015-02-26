@@ -161,3 +161,10 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+*.lib
+SunCloud.pro.user.18
+SunCloud.pro.user.3.0-pre1
+SunCloud.pro.user.back
+tests/Test.pro
+lib/libsuncloud.lib
+*.lib

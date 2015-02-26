@@ -1,5 +1,13 @@
-#ifndef METARPARSER_H
-#define METARPARSER_H
+#ifndef METARHANDLER_H
+#define METARHANDLER_H
+
+
+class MetarHandler
+{
+public:
+    MetarHandler();
+    ~MetarHandler();
+};
 
 #include <vector>
 #include <memory>
@@ -9,16 +17,15 @@
 namespace altran {
 namespace suncloud {
 
-/*
- ** \class <MetarParser> [<MetarParser.cc>] [<MetarParser.h>]
- */
-class MetarParser{
+
+class MetarHandler{
 public:
     typedef std::vector<std::shared_ptr<Metar> > PMetarArray;
-    MetarParser();
-    virtual ~MetarParser();
 
-    void parse(std::istream& os);
+    MetarHandler();
+    virtual ~MetarHandler();
+
+    void parse(std::istream& is);
 
     PMetarArray getPMetarArray() const { return m_pMetarArray; }
 
@@ -30,4 +37,4 @@ private:
 }
 }
 
-#endif // METARPARSER_H
+#endif // METARHANDLER_H

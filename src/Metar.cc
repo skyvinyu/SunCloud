@@ -172,7 +172,7 @@ Metar::Metar() {}
 void Metar::decode(const std::string& input) {
     int ret = 0;
     char *noConstInput = new char[input.length() + 1];
-    strcpy(noConstInput, input.c_str());
+    strncpy(noConstInput, input.c_str(), input.length());
 
     ret = DcdMETAR(noConstInput, this);
 
