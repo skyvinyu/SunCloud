@@ -2,13 +2,6 @@
 #define METARHANDLER_H
 
 
-class MetarHandler
-{
-public:
-    MetarHandler();
-    ~MetarHandler();
-};
-
 #include <vector>
 #include <memory>
 
@@ -33,6 +26,8 @@ private:
     PMetarArray m_pMetarArray;
 
 };
+
+typedef std::shared_ptr<MetarHandler> PMetarHandler;
 
 }
 }

@@ -46,7 +46,9 @@ SOURCES += \
     MultiMetarFilter.cc \
     MetarSkyCoverFilter.cc \
     IndexedMetar.cc \
-    MetarHandler.cc
+    MetarHandler.cc \
+    TimePointToAndFromString.cc \
+    MetarFileReader.cc
 #    FlightRouteScilabWriter.cc
 
 HEADERS  += \
@@ -72,6 +74,9 @@ HEADERS  += \
     MetarSkyCoverFilter.h \
     CustomGeometryIndexer.h \
     IndexedMetar.h \
-    MetarHandler.h
+    MetarHandler.h \
+    TimePointToAndFromString.h \
+    IMetarReader.h \
+    MetarFileReader.h
 #    IFlightRouteWriter.h \
 #    FlightRouteScilabWriter.h

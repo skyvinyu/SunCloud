@@ -11,7 +11,8 @@ namespace test {
 
 //const char* MetarTest::m_filePath = "C:/Users/Sun-Cloud/Documents/Workspace_Qt/SunCloud/tests/data/metar/metar.csv";
 //const char* MetarTest::m_filePath = "../../../tests/data/metar/metar.csv";
-const char* MetarTest::m_filePath = "../../../tests/data/metar/france.csv";
+//const char* MetarTest::m_filePath = "../../../tests/data/metar/france.csv";
+const char* MetarTest::m_filePath = "../../../tests/data/metar/10cases.csv";
 
 void MetarTest::testDecode() {
     std::ifstream file(m_filePath, std::fstream::in);
